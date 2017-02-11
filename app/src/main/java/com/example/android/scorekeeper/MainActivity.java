@@ -12,6 +12,10 @@ public class MainActivity extends AppCompatActivity {
     private int teamBScore = 0;
     private int teamBFouls = 0;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

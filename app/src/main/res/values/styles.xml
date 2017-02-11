@@ -16,13 +16,14 @@
 
     <style name="buttonPlusStyle">
         <item name="android:textSize">24sp</item>
-        <item name="android:text">+</item>
+        <item name="android:text">@string/buttonPlus</item>
     </style>
 
     <style name="textViewCount">
         <item name="android:textSize">24sp</item>
         <item name="android:paddingLeft">15dp</item>
         <item name="android:paddingRight">15dp</item>
+        <item name="android:text">@string/valueKeeperIndex</item>
     </style>
 
     <style name="textViewRowName">

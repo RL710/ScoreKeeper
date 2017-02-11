@@ -4,5 +4,12 @@
     <string name="TeamB">Team B</string>
     <string name="Row1">Score</string>
     <string name="Row2">Fouls</string>
+
+
+
+    <string name="valueKeeperIndex">0</string>
+
+    <!--ButtonText-->
     <string name="buttonReset">Reset</string>
+    <string name="buttonPlus">+</string>
 </resources>
