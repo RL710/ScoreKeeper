@@ -1,93 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.android.scorekeeper.MainActivity">
+    android:layout_height="match_parent">
+
+    <TableLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.android.scorekeeper.MainActivity">
 
 
-    <TableRow style="">
+        <TableRow>
 
-        <TextView
-            style="@style/textTeamStyle"
-            android:layout_gravity="center"
-            android:layout_span="2"
-            android:text="@string/TeamA" />
+            <EditText
+                android:id="@+id/editTextTeamA"
+                style="@style/editTextTeamStyle"
+                android:hint="@string/TeamA" />
 
-        <TextView
-            style="@style/textTeamStyle"
-            android:layout_column="3"
-            android:layout_gravity="center"
-            android:layout_span="2"
-            android:text="@string/TeamB" />
-    </TableRow>
+            <EditText
+                android:id="@+id/editTextTeamB"
+                style="@style/editTextTeamStyle"
+                android:layout_column="3"
+                android:hint="@string/TeamB"
+                />
+        </TableRow>
 
-    <TableRow>
+        <TableRow>
 
-        <Button
-            android:id="@+id/buttonARow1"
-            style="@style/buttonPlusStyle"
-            android:onClick="buttonARow1" />
+            <Button
+                android:id="@+id/buttonARow1"
+                style="@style/buttonPlusStyle"
+                android:onClick="buttonARow1" />
 
-        <TextView
-            android:id="@+id/textViewCountARow1"
-            style="@style/textViewCount" />
+            <TextView
+                android:id="@+id/textViewCountARow1"
+                style="@style/textViewCount" />
 
-        <TextView
-            style="@style/textViewRowName"
-            android:text="@string/Row1" />
+            <TextView
+                style="@style/textViewRowName"
+                android:text="@string/Row1" />
 
-        <TextView
-            android:id="@+id/textViewCountBRow1"
-            style="@style/textViewCount" />
+            <TextView
+                android:id="@+id/textViewCountBRow1"
+                style="@style/textViewCount" />
 
-        <Button
-            android:id="@+id/buttonBRow1"
-            style="@style/buttonPlusStyle"
-            android:onClick="buttonBRow1" />
+            <Button
+                android:id="@+id/buttonBRow1"
+                style="@style/buttonPlusStyle"
+                android:onClick="buttonBRow1" />
 
-    </TableRow>
+        </TableRow>
 
-    <TableRow>
+        <TableRow>
 
-        <Button
-            android:id="@+id/buttonARow2"
-            style="@style/buttonPlusStyle"
-            android:onClick="buttonARow2" />
+            <Button
+                android:id="@+id/buttonARow2"
+                style="@style/buttonPlusStyle"
+                android:onClick="buttonARow2" />
 
-        <TextView
-            android:id="@+id/textViewCountARow2"
-            style="@style/textViewCount" />
+            <TextView
+                android:id="@+id/textViewCountARow2"
+                style="@style/textViewCount" />
 
-        <TextView
-            style="@style/textViewRowName"
-            android:text="@string/Row2" />
+            <TextView
+                style="@style/textViewRowName"
+                android:text="@string/Row2" />
 
-        <TextView
-            android:id="@+id/textViewCountBRow2"
-            style="@style/textViewCount" />
+            <TextView
+                android:id="@+id/textViewCountBRow2"
+                style="@style/textViewCount" />
 
-        <Button
-            android:id="@+id/buttonBRow2"
-            style="@style/buttonPlusStyle"
-            android:onClick="buttonBRow2" />
-    </TableRow>
+            <Button
+                android:id="@+id/buttonBRow2"
+                style="@style/buttonPlusStyle"
+                android:onClick="buttonBRow2" />
+        </TableRow>
 
-    <TableRow>
+        <TableRow>
 
-        <Button
-            android:id="@+id/buttonReset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_marginTop="15dp"
-            android:layout_span="3"
-            android:onClick="buttonReset"
-            android:text="@string/buttonReset" />
-    </TableRow>
-</TableLayout>
+            <Button
+                android:id="@+id/buttonReset"
+                style="@style/applyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="buttonReset"
+                android:text="@string/buttonReset" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/buttonSave"
+                style="@style/applyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="buttonSave"
+                android:text="@string/buttonSave"
+
+                />
+        </TableRow>
+
+        <TableLayout>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/savedMatch" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/valuesColumHeadline"
+                    android:text="@string/number"
+                    android:layout_weight="2"/>
+                <TextView
+                    style="@style/teamColumHeadline"
+                    android:text="@string/TeamA" />
+
+                <TextView
+                    style="@style/valuesColumHeadline"
+                    android:text="@string/fouls" />
+
+                <TextView
+                    style="@style/valuesColumHeadline"
+                    android:text="@string/goals" />
+
+                <TextView
+                    style="@style/valuesColumHeadline"
+                    android:text="@string/goals" />
+
+                <TextView
+                    style="@style/valuesColumHeadline"
+                    android:text="@string/fouls" />
+
+                <TextView
+                    style="@style/teamColumHeadline"
+                    android:text="@string/TeamB" />
+            </TableRow>
+        </TableLayout>
+    </TableLayout>
+</ScrollView>

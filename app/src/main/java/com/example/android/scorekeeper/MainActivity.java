@@ -7,14 +7,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int teamAScore = 0;
-    private int teamAFouls = 0;
-    private int teamBScore = 0;
-    private int teamBFouls = 0;
-
-
-
-
+    Team t1 = new Team();
+    Team t2 = new Team();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,47 +17,58 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonARow1(View view) {
-        teamAScore += 1;
+        t1.plusScore();
         displayAScore();
     }
-    private void displayAScore(){
+
+    private void displayAScore() {
         TextView textView = (TextView) findViewById(R.id.textViewCountARow1);
-        textView.setText("" + teamAScore);
+        textView.setText(Integer.toString(t1.getScore()));
     }
+
     public void buttonARow2(View view) {
-        teamAFouls += 1;
+        t1.plusFouls();
         displayAFouls();
     }
-    private void displayAFouls(){
+
+    private void displayAFouls() {
         TextView textView = (TextView) findViewById(R.id.textViewCountARow2);
-        textView.setText("" + teamAFouls);
+        textView.setText(Integer.toString(t1.getFouls()));
     }
+
     public void buttonBRow1(View view) {
-        teamBScore += 1;
+        t2.plusScore();
         displayBScore();
     }
 
-    private void displayBScore(){
+    private void displayBScore() {
         TextView textView = (TextView) findViewById(R.id.textViewCountBRow1);
-        textView.setText("" + teamBScore);
+        textView.setText(Integer.toString(t2.getScore()));
     }
+
     public void buttonBRow2(View view) {
-        teamBFouls+= 1;
+        t2.plusFouls();
         displayBFouls();
     }
-    private void displayBFouls(){
+
+    private void displayBFouls() {
         TextView textView = (TextView) findViewById(R.id.textViewCountBRow2);
-        textView.setText("" + teamBFouls);
+        textView.setText(Integer.toString(t2.getFouls()));
     }
-    public void buttonReset(View view){
-        teamAScore = 0;
+
+    public void buttonReset(View view) {
+        t1.reset();
+        t2.reset();
         displayAScore();
-        teamAFouls = 0;
         displayAFouls();
-        teamBScore = 0;
         displayBScore();
-        teamBFouls = 0;
         displayBFouls();
+    }
+
+    public void buttonSave(View view) {
+
+        Match match = new Match(t1, t2);
+
     }
 
 

@@ -1,5 +1,7 @@
 <resources>
+
     <string name="app_name">Score Keeper</string>
+
     <string name="TeamA">Team A</string>
     <string name="TeamB">Team B</string>
     <string name="Row1">Score</string>
@@ -7,9 +9,17 @@
 
 
 
-    <string name="valueKeeperIndex">0</string>
-
     <!--ButtonText-->
     <string name="buttonReset">Reset</string>
     <string name="buttonPlus">+</string>
+    <string name="buttonSave">Save</string>
+    <string name="valueKeeperIndex">0</string>
+
+    <!--Headlines-->
+    <string name="savedMatch">Saved Matches</string>
+
+    <!--Saved Matches Table-->
+    <string name="goals">G</string>
+    <string name="fouls">F</string>
+    <string name="number">no.</string>
 </resources>
